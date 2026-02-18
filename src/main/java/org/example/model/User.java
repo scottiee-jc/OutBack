@@ -1,0 +1,20 @@
+package org.example.model;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+@Entity
+@Data
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String email;
+    private String password;
+
+    @ManyToOne
+    private Tenant tenant;
+
+    private String role; // e.g., ADMIN, USER
+}

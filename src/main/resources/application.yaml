@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/agency_outreach
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+aws:
+  region: us-east-1
+  accessKey: YOUR_AWS_ACCESS_KEY
+  secretKey: YOUR_AWS_SECRET_KEY
